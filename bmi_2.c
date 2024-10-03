@@ -14,20 +14,24 @@ date 10/2/2024
 #include <math.h> 
 
 double get_bmi(int weight, double height);
+/* a get call for the formula*/
+
 int main(void) 
 {
 
-	int  weight;
-	double height, bmi; 
+	int  weight; // weight will be an intiger 
+	double height, bmi; // height and bmi will he double 
 	printf("Enter your weight in lbs: \n"); 
 	scanf("%d",&weight); 
 	printf("Enter your height: \n"); 
 	scanf("%lf", &height);
 
-	bmi = get_bmi(weight, height); 
+	bmi = get_bmi(weight, height); //get call 
 
-	printf("your bmi is %.1f\n", bmi); 
-	 if (bmi <18.5) {
+	printf("your bmi is %.1f\n", bmi); // return output with a decimal 
+	 
+	//if statements for different category 
+	if (bmi <18.5) {
         printf("You are underweight! lets go out for lunch \n");
         }
         else if (bmi <25.0){
@@ -46,7 +50,7 @@ return 0;
 
 double get_bmi(int weight, double height) {
 
-	height = height * 12;/*converting into inch*/  
+	height = height * 12; /*converting into inch*/  
 	return (703 * weight) / (height * height);
 	
 
