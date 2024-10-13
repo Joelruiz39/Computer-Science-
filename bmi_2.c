@@ -13,16 +13,16 @@ date 10/2/2024
 #include <stdio.h> 
 #include <math.h> 
 
-double get_bmi(int weight, double height);
+double get_bmi(double weight, double height);
 /* a get call for the formula*/
 
 int main(void) 
 {
 
-	int  weight; // weight will be an intiger 
+	double  weight; // weight will be a double 
 	double height, bmi; // height and bmi will he double 
 	printf("Enter your weight in lbs: \n"); 
-	scanf("%d",&weight); 
+	scanf("%lf",&weight); 
 	printf("Enter your height: \n"); 
 	scanf("%lf", &height);
 
@@ -48,9 +48,8 @@ return 0;
 
 }
 
-double get_bmi(int weight, double height) {
-
-	height = height * 12; /*converting into inch*/  
+double get_bmi(double weight, double height) {
+  
 	return (703 * weight) / (height * height);
 	
 
